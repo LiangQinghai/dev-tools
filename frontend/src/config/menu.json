@@ -1,0 +1,142 @@
+[
+	{
+		"title": "首页",
+		"path": "/home",
+		"icon": "icon-home"
+	},
+	{
+		"title": "后台中心",
+		"path": "/admin",
+		"icon": "icon-user",
+		"children": [
+			{
+				"title": "后台管理",
+				"path": "/admin/user/index",
+				"name": "adminUser",
+				"component": "@/views/admin/user/index.vue",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			}
+		]
+	},
+	{
+		"title": "商家中心",
+		"path": "/merchant",
+		"icon": "icon-user",
+		"children": [
+			{
+				"title": "商家管理",
+				"path": "/merchant/manage/index",
+				"name": "merchantManage",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			},
+			{
+				"title": "商家审核",
+				"path": "/merchant/certification/index",
+				"name": "merchantCertification",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			},
+			{
+				"title": "商家商品",
+				"path": "/merchant/goods/index",
+				"name": "merchantGoods",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			}
+		]
+	},
+	{
+		"title": "会员中心",
+		"path": "/member",
+		"icon": "icon-user",
+		"children": [
+			{
+				"title": "会员管理",
+				"path": "/member/manage/index",
+				"name": "memberManage",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			},
+			{
+				"title": "优惠券",
+				"path": "/member/coupons/index",
+				"name": "memberCoupons",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			},
+			{
+				"title": "积分配置",
+				"path": "/member/credit/index",
+				"name": "memberCredit",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			}
+		]
+	},
+	{
+		"title": "报表中心",
+		"path": "/report",
+		"icon": "icon-user",
+		"children": [
+			{
+				"title": "会员数据统计",
+				"path": "/report/memberStatistics/index",
+				"name": "reportMemberStatistics",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			},
+			{
+				"title": "商家统计",
+				"path": "/report/merchantStatistics/index",
+				"name": "reportMerchantStatistics",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			},
+			{
+				"title": "积分统计",
+				"path": "/report/creditStatistics/index",
+				"name": "reportCreditStatistics",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			}
+		]
+	},
+	{
+		"title": "个人中心",
+		"path": "/userCenter",
+		"icon": "icon-user",
+		"children": [
+			{
+				"title": "用户设置",
+				"path": "/userCenter/setting/index",
+				"name": "userCenterSetting",
+				"meta": {
+					"keepAlive": true,
+					"requiresAuth": true
+				}
+			}
+		]
+	}
+]

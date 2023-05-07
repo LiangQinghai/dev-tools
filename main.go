@@ -3,6 +3,9 @@ package main
 import (
 	"dev-tools/internal"
 	"embed"
+	"github.com/wailsapp/wails/v2/pkg/options/linux"
+	"github.com/wailsapp/wails/v2/pkg/options/mac"
+	"github.com/wailsapp/wails/v2/pkg/options/windows"
 
 	_ "dev-tools/internal/api"
 	"github.com/wailsapp/wails/v2"
@@ -21,8 +24,21 @@ func main() {
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
-		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
-		Bind:             internal.GetRegisterList(),
+		Bind: internal.GetRegisterList(),
+		Windows: &windows.Options{
+			WebviewIsTransparent: true,
+			WindowIsTranslucent:  true,
+			BackdropType:         windows.Acrylic,
+			DisableWindowIcon:    true,
+		},
+		Mac: &mac.Options{
+			TitleBar:             mac.TitleBarHidden(),
+			WebviewIsTransparent: true,
+			WindowIsTranslucent:  true,
+		},
+		Linux: &linux.Options{
+			WindowIsTranslucent: true,
+		},
 	})
 
 	if err != nil {
